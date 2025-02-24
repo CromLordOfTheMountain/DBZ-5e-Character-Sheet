@@ -4,37 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DBZ 5e Character Sheet</title>
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/style.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/sheet.css">
 </head>
 <body>
-
     <div class="tabs">
         <button class="tab-button" onclick="switchTab('core')">Core</button>
         <button class="tab-button" onclick="switchTab('bio')">Bio</button>
-        <button class="tab-button" onclick="switchTab('spells')">Spells</button>
+        <button class="tab-button" onclick="switchTab('powers')">Powers</button>
     </div>
-
+    
+    <!-- Core Tab -->
     <div id="core" class="tab-content">
         <img src="https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/images/core.png" alt="Core Sheet">
+        <label>Character Name:</label>
+        <input type="text" name="attr_character_name">
+        
+        <label>Class & Level:</label>
+        <input type="text" name="attr_class">
+        
+        <label>Race:</label>
+        <input type="text" name="attr_race">
+        
+        <label>Power Level:</label>
+        <input type="number" name="attr_power_level">
+
+        <label>Ki Points:</label>
+        <input type="number" name="attr_ki_points">
+        <button type="roll" name="roll_ki_regen" value="/roll 1d10 + @{wisdom_mod}">Regenerate Ki</button>
+
+        <label>Exhaustion:</label>
+        <select name="attr_exhaustion">
+            <option value="0">0 - No Exhaustion</option>
+            <option value="1">1 - Disadvantage on Ability Checks</option>
+            <option value="2">2 - Half Movement Speed</option>
+            <option value="3">3 - Disadvantage on Attack & Saves</option>
+            <option value="4">4 - HP Max Halved</option>
+            <option value="5">5 - Speed Reduced to 0</option>
+            <option value="6">6 - Unconscious</option>
+        </select>
+        <button type="roll" name="roll_exhaustion" value="/roll 1d6">Apply Exhaustion</button>
     </div>
 
+    <!-- Bio Tab -->
     <div id="bio" class="tab-content" style="display: none;">
         <img src="https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/images/bio.png" alt="Bio Sheet">
+        <label>Background:</label>
+        <textarea name="attr_background"></textarea>
+
+        <label>Allies & Organizations:</label>
+        <textarea name="attr_allies"></textarea>
     </div>
 
-    <div id="spells" class="tab-content" style="display: none;">
-        <img src="https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/images/spells.png" alt="Spells Sheet">
+    <!-- Powers Tab -->
+    <div id="powers" class="tab-content" style="display: none;">
+        <img src="https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/images/spells.png" alt="Powers Sheet">
+        <fieldset class="repeating_powers">
+            <input type="text" name="attr_power_name" placeholder="Power Name">
+            <input type="number" name="attr_power_ki_cost" placeholder="Ki Cost">
+            <textarea name="attr_power_effect" placeholder="Effect Description"></textarea>
+            <button type="roll" name="roll_power" value="/roll 1d20 + @{power_mod}">Use Power</button>
+        </fieldset>
     </div>
 
     <script>
         function switchTab(tabName) {
-            document.getElementById('core').style.display = 'none';
-            document.getElementById('bio').style.display = 'none';
-            document.getElementById('spells').style.display = 'none';
-
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.style.display = 'none';
+            });
             document.getElementById(tabName).style.display = 'block';
         }
     </script>
-
 </body>
 </html>
