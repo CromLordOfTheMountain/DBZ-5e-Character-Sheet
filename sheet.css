@@ -1,6 +1,9 @@
+/* DBZ 5E Character Sheet Styles */
+
 body {
     background-color: #f4a900;
     text-align: center;
+    font-family: Arial, sans-serif;
 }
 
 .tabs {
@@ -27,4 +30,29 @@ body {
     max-width: 800px;
     border: 3px solid black;
     border-radius: 10px;
+}
+
+input, textarea, select {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    width: 80%;
+    max-width: 400px;
+    font-size: 16px;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+button[type="roll"] {
+    background-color: #ff0000;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="roll"]:hover {
+    background-color: #cc0000;
 }
