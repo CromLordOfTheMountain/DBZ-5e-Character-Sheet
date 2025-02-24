@@ -1,11 +1,12 @@
 {
-  "schema_version": 1,
-  "name": "DBZ 5e Character Sheet",
-  "version": "1.0",
-  "author": "LordCrom",
-  "roll20userid": "4101769",
-  "html": "https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/refs/heads/main/sheet.html",
-  "css": "https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/refs/heads/main/sheet.css",
-  "preview": "https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/images/core.png",
-  "instructions": "This is a custom character sheet for a DBZ-inspired 5e game."
+    "schema_version": 1,
+    "character": {
+        "name": "DBZ 5e Character Sheet",
+        "author": "LordCrom",
+        "roll20userid": "4101769",
+        "html": "https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/sheet.html",
+        "css": "https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/sheet.css",
+        "preview": "https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/images/core.png",
+        "instructions": "This is a custom character sheet for a DBZ-inspired 5e game with rollable stats, Ki tracking, and exhaustion mechanics."
+    }
 }
