@@ -1,9 +1,0 @@
-{
-    "html": "sheet.html",
-    "css": "sheet.css",
-    "authors": "CromLordOfTheMountain",
-    "roll20userid": "your-roll20-user-id",
-    "preview": "https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/images/core.png",
-    "instructions": "This is a Dragon Ball Z 5e Character Sheet for use in Roll20.",
-    "legacy": false
-}
