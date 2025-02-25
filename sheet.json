@@ -1,12 +1,111 @@
 {
-    "schema_version": 1,
-    "character": {
-        "name": "DBZ 5e Character Sheet",
-        "author": "LordCrom",
-        "roll20userid": "4101769",
-        "html": "https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/sheet.html",
-        "css": "https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/sheet.css",
-        "preview": "https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/images/core.png",
-        "instructions": "This is a custom character sheet for a DBZ-inspired 5e game with rollable stats, Ki tracking, and exhaustion mechanics."
+  "html": "sheet.html",
+  "css": "sheet.css",
+  "authors": "CromLordOfTheMountain",
+  "roll20userid": "4101769",
+  "preview": "https://github.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/blob/main/images/core.png?raw=true",
+  "compendium": "dnd5e",
+  "instructions": "This is a custom Dragon Ball Z 5e character sheet based on the D&D 5e Legacy sheet.",
+  "useroptions": [
+    {
+      "attribute": "npc",
+      "displayname": "NPC Mode",
+      "type": "checkbox",
+      "value": "1",
+      "description": "Switch the sheet to NPC layout for enemy characters."
+    },
+    {
+      "attribute": "rtype",
+      "displayname": "Roll Queries",
+      "type": "select",
+      "options": [
+        "Always Roll Advantage|{{always=1}} {{r2=[[1d20",
+        "Advantage Toggle|@{advantagetoggle}",
+        "Query Advantage|{{query=1}} ?{Advantage?|Normal Roll,{{normal=1}} {{r2=[[0d20|Advantage,{{advantage=1}} {{r2=[[1d20|Disadvantage,{{disadvantage=1}} {{r2=[[1d20}",
+        "Never Roll Advantage|{{normal=1}} {{r2=[[0d20"
+      ],
+      "default": "{{always=1}} {{r2=[[1d20",
+      "description": "Choose whether rolls always use advantage, toggle it, or prompt for each roll."
+    },
+    {
+      "attribute": "wtype",
+      "displayname": "Whisper Rolls to GM",
+      "type": "select",
+      "options": [
+        "Never Whisper Rolls|",
+        "Whisper Toggle|@{whispertoggle}",
+        "Query Whisper|?{Whisper?|Public Roll,|Whisper Roll,/w gm }",
+        "Always Whisper Rolls|/w gm "
+      ],
+      "default": "",
+      "description": "Choose if rolls are always whispered to the GM, or toggle per roll."
+    },
+    {
+      "attribute": "dtype",
+      "displayname": "Auto Damage Roll",
+      "type": "select",
+      "options": [
+        "Don't Auto Roll Damage|pick",
+        "Auto Roll Damage & Crit|full"
+      ],
+      "default": "pick",
+      "description": "Decide if damage rolls are automatic or manual."
+    },
+    {
+      "attribute": "core_die",
+      "displayname": "Core Die Roll",
+      "type": "text",
+      "default": "1d20",
+      "description": "Modify the core die roll (e.g., 2d10, 3d6)."
+    },
+    {
+      "attribute": "ki_points",
+      "displayname": "Ki Points",
+      "type": "number",
+      "default": "10",
+      "description": "Ki Points pool for all characters, functioning like a class resource."
+    },
+    {
+      "attribute": "power_level",
+      "displayname": "Power Level",
+      "type": "number",
+      "default": "1000",
+      "description": "Represents the character's current power level in DBZ terms."
+    },
+    {
+      "attribute": "exhaustion",
+      "displayname": "Exhaustion",
+      "type": "select",
+      "options": [
+        "0 - No Exhaustion|0",
+        "1 - Disadvantage on Ability Checks|1",
+        "2 - Speed Halved|2",
+        "3 - Disadvantage on Attacks & Saves|3",
+        "4 - HP Max Halved|4",
+        "5 - Speed Reduced to 0|5",
+        "6 - Death|6"
+      ],
+      "default": "0",
+      "description": "Exhaustion levels impact character performance as per DBZ fatigue mechanics."
+    },
+    {
+      "attribute": "wildcard_system",
+      "displayname": "Wildcard System (Unique Abilities)",
+      "type": "text",
+      "default": "",
+      "description": "Used for special Ki abilities, transformations, or unique skills beyond standard techniques."
+    },
+    {
+      "attribute": "tab",
+      "displayname": "Default Tab",
+      "type": "select",
+      "options": [
+        "Core|core",
+        "Bio|bio",
+        "Spells|spells"
+      ],
+      "default": "core",
+      "description": "Choose the default character sheet tab."
     }
+  ]
 }
