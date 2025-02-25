@@ -1,17 +1,17 @@
-/* DBZ 5E Character Sheet Styles */
-
+/* Background and General Layout */
 body {
     background-color: #f4a900;
     text-align: center;
     font-family: Arial, sans-serif;
 }
 
+/* Tabs */
 .tabs {
-    margin: 20px;
+    margin: 10px;
 }
 
 .tab-button {
-    padding: 10px 20px;
+    padding: 8px 20px;
     font-size: 16px;
     cursor: pointer;
     margin: 5px;
@@ -25,34 +25,46 @@ body {
     background-color: #444;
 }
 
+/* Character Sheet Styling */
 .tab-content img {
-    width: 90%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 900px;
     border: 3px solid black;
     border-radius: 10px;
 }
 
-input, textarea, select {
-    display: block;
-    margin: 10px auto;
-    padding: 8px;
-    width: 80%;
-    max-width: 400px;
-    font-size: 16px;
-    border: 2px solid #000;
+/* Overlay Inputs */
+.overlay-input {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
     border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-button[type="roll"] {
-    background-color: #ff0000;
-    color: white;
-    padding: 10px 15px;
+/* Dice Roll Buttons */
+.overlay-button {
+    position: absolute;
+    background: #ffcc00;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
     font-size: 16px;
-    border: none;
-    border-radius: 5px;
+    font-weight: bold;
     cursor: pointer;
+    text-align: center;
 }
 
-button[type="roll"]:hover {
-    background-color: #cc0000;
+.overlay-button:hover {
+    background: #ff9900;
+}
+
+/* Exhaustion Dropdown */
+.overlay-input select {
+    font-size: 14px;
+    padding: 5px;
+    border-radius: 5px;
 }
