@@ -1,110 +1,151 @@
-/* Background Styling */
+/* General Sheet Styling */
 .sheet-container {
     position: relative;
-    width: 1000px;
-    height: 1400px;
-    background-color: #fa900;
-    margin: auto;
-}
-
-.sheet-background {
-    position: absolute;
     width: 100%;
-    height: 100%;
-    z-index: -1;
+    height: auto;
+    background-size: cover;
 }
 
-/* Character Info */
-.char-info {
+/* Character Name */
+.sheet-character-name {
     position: absolute;
-    top: 50px;
-    left: 100px;
-    width: 800px;
+    top: 5%;
+    left: 15%;
+    width: 30%;
+    height: 4%;
+    font-size: 22px;
+    text-align: center;
 }
 
-.char-info label, .char-info input {
-    display: block;
-    font-size: 16px;
-}
-
-.char-info input {
-    width: 300px;
-}
-
-/* Core Stats */
-.stats {
+/* Ki Points */
+.sheet-ki-points {
     position: absolute;
-    top: 250px;
-    left: 60px;
-    width: 200px;
+    top: 15%;
+    left: 10%;
+    width: 20%;
+    height: 4%;
+    font-size: 18px;
+    text-align: center;
 }
 
-.stats label {
-    font-size: 14px;
-}
-
-.stats input {
-    width: 50px;
-}
-
-/* Rolls */
-.rolls {
+/* Power Level */
+.sheet-power-level {
     position: absolute;
-    top: 600px;
-    left: 60px;
+    top: 15%;
+    left: 40%;
+    width: 20%;
+    height: 4%;
+    font-size: 18px;
+    text-align: center;
 }
 
-.rolls button {
-    display: block;
-    margin-bottom: 5px;
+/* Exhaustion Tracker */
+.sheet-exhaustion {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 20%;
+    height: 4%;
+    font-size: 18px;
+    text-align: center;
 }
+
+/* Core Stats (Strength, Dexterity, etc.) */
+.sheet-core-stat {
+    position: absolute;
+    width: 10%;
+    height: 4%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.sheet-strength { top: 30%; left: 5%; }
+.sheet-dexterity { top: 30%; left: 20%; }
+.sheet-constitution { top: 30%; left: 35%; }
+.sheet-intelligence { top: 30%; left: 50%; }
+.sheet-wisdom { top: 30%; left: 65%; }
+.sheet-charisma { top: 30%; left: 80%; }
+
+/* Saving Throws */
+.sheet-saving-throws {
+    position: absolute;
+    width: 15%;
+    height: 4%;
+    font-size: 18px;
+    text-align: center;
+}
+
+.sheet-save-strength { top: 40%; left: 5%; }
+.sheet-save-dexterity { top: 40%; left: 20%; }
+.sheet-save-constitution { top: 40%; left: 35%; }
+.sheet-save-intelligence { top: 40%; left: 50%; }
+.sheet-save-wisdom { top: 40%; left: 65%; }
+.sheet-save-charisma { top: 40%; left: 80%; }
 
 /* Skills */
-.skills {
+.sheet-skill {
     position: absolute;
-    top: 800px;
-    left: 60px;
+    width: 20%;
+    height: 3%;
+    font-size: 16px;
+    text-align: center;
 }
 
-.skills label, .skills input {
-    display: inline-block;
-    margin-right: 5px;
-}
+.sheet-acrobatics { top: 50%; left: 5%; }
+.sheet-animal-handling { top: 50%; left: 25%; }
+.sheet-arcana { top: 50%; left: 45%; }
+.sheet-athletics { top: 50%; left: 65%; }
+.sheet-deception { top: 50%; left: 85%; }
 
-/* Ki Abilities */
-.ki-abilities {
+/* Attack Rolls */
+.sheet-attack {
     position: absolute;
-    top: 1000px;
-    left: 60px;
-    width: 400px;
+    width: 25%;
+    height: 4%;
+    font-size: 18px;
+    text-align: center;
 }
 
-.ki-abilities input, .ki-abilities textarea {
-    display: block;
-    width: 90%;
-}
+.sheet-attack-1 { top: 60%; left: 10%; }
+.sheet-attack-2 { top: 60%; left: 40%; }
+.sheet-attack-3 { top: 60%; left: 70%; }
 
-/* Attacks & Spells */
-.attacks {
+/* Wildcard System - Special Abilities */
+.sheet-wildcard {
     position: absolute;
-    top: 1200px;
-    left: 60px;
-    width: 400px;
+    top: 75%;
+    left: 10%;
+    width: 80%;
+    height: 8%;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #FFF;
 }
 
-.attacks input {
-    width: 200px;
-}
-
-/* Features & Traits */
-.traits {
+/* Tabs */
+.sheet-tab {
     position: absolute;
-    top: 1300px;
-    left: 60px;
-    width: 400px;
+    width: 15%;
+    height: 5%;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
 }
 
-.traits textarea {
-    width: 100%;
-    height: 80px;
+.sheet-tab-core { top: 90%; left: 10%; }
+.sheet-tab-bio { top: 90%; left: 35%; }
+.sheet-tab-spells { top: 90%; left: 60%; }
+
+/* Tab Switching */
+.sheet-tab-content {
+    display: none;
+}
+
+.sheet-tab-core-content {
+    display: block; /* Default tab */
+}
+
+/* Active Tab */
+.sheet-tab.active {
+    background-color: #FFCC00;
 }
