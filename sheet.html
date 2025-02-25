@@ -4,90 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DBZ 5e Character Sheet</title>
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/sheet.css">
+    <link rel="stylesheet" type="text/css" href="sheet.css">
 </head>
 <body>
-    <div class="tabs">
-        <button class="tab-button" onclick="switchTab('core')">Core</button>
-        <button class="tab-button" onclick="switchTab('bio')">Bio</button>
-        <button class="tab-button" onclick="switchTab('spells')">Spells</button>
-    </div>
+    <div class="sheet-container">
+        <img src="images/core.png" class="sheet-background">
 
-    <!-- Core Page -->
-    <div id="core" class="tab-content">
-        <img src="https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/images/core.png" alt="Core Sheet">
-        
-        <!-- Character Name -->
-        <input type="text" name="attr_character_name" class="overlay-input" style="top: 9%; left: 12%; width: 30%;">
-
-        <!-- Class & Level -->
-        <input type="text" name="attr_class" class="overlay-input" style="top: 9%; left: 55%; width: 15%;">
-        
-        <!-- Race -->
-        <input type="text" name="attr_race" class="overlay-input" style="top: 9%; left: 72%; width: 10%;">
-
-        <!-- Background -->
-        <input type="text" name="attr_background" class="overlay-input" style="top: 9%; left: 45%; width: 15%;">
-
-        <!-- Alignment -->
-        <input type="text" name="attr_alignment" class="overlay-input" style="top: 9%; left: 80%; width: 15%;">
-
-        <!-- Ki Points -->
-        <input type="number" name="attr_ki_points" class="overlay-input" style="top: 15%; left: 10%; width: 5%;">
-
-        <!-- Exhaustion -->
-        <select name="attr_exhaustion" class="overlay-input" style="top: 18%; left: 10%; width: 15%;">
+        <!-- Character Info -->
+        <input type="text" name="attr_character_name" class="sheet-character-name">
+        <input type="number" name="attr_ki_points" class="sheet-ki-points">
+        <input type="number" name="attr_power_level" class="sheet-power-level">
+        <select name="attr_exhaustion" class="sheet-exhaustion">
             <option value="0">0 - No Exhaustion</option>
             <option value="1">1 - Disadvantage on Ability Checks</option>
             <option value="2">2 - Speed Halved</option>
             <option value="3">3 - Disadvantage on Attacks & Saves</option>
-            <option value="4">4 - Hit Point Max Halved</option>
+            <option value="4">4 - HP Max Halved</option>
             <option value="5">5 - Speed Reduced to 0</option>
             <option value="6">6 - Death</option>
         </select>
 
-        <!-- Strength -->
-        <input type="number" name="attr_strength" class="overlay-input" style="top: 25%; left: 5%; width: 5%;">
-        <button type="roll" name="roll_strength" value="@{strength}" class="overlay-button" style="top: 25%; left: 12%;">🎲</button>
+        <!-- Stats -->
+        <input type="number" name="attr_strength" class="sheet-core-stat sheet-strength">
+        <input type="number" name="attr_dexterity" class="sheet-core-stat sheet-dexterity">
+        <input type="number" name="attr_constitution" class="sheet-core-stat sheet-constitution">
+        <input type="number" name="attr_intelligence" class="sheet-core-stat sheet-intelligence">
+        <input type="number" name="attr_wisdom" class="sheet-core-stat sheet-wisdom">
+        <input type="number" name="attr_charisma" class="sheet-core-stat sheet-charisma">
 
-        <!-- Dexterity -->
-        <input type="number" name="attr_dexterity" class="overlay-input" style="top: 30%; left: 5%; width: 5%;">
-        <button type="roll" name="roll_dexterity" value="@{dexterity}" class="overlay-button" style="top: 30%; left: 12%;">🎲</button>
+        <!-- Saving Throws -->
+        <input type="checkbox" name="attr_save_strength" class="sheet-saving-throws sheet-save-strength">
+        <input type="checkbox" name="attr_save_dexterity" class="sheet-saving-throws sheet-save-dexterity">
+        <input type="checkbox" name="attr_save_constitution" class="sheet-saving-throws sheet-save-constitution">
+        <input type="checkbox" name="attr_save_intelligence" class="sheet-saving-throws sheet-save-intelligence">
+        <input type="checkbox" name="attr_save_wisdom" class="sheet-saving-throws sheet-save-wisdom">
+        <input type="checkbox" name="attr_save_charisma" class="sheet-saving-throws sheet-save-charisma">
 
-        <!-- Constitution -->
-        <input type="number" name="attr_constitution" class="overlay-input" style="top: 35%; left: 5%; width: 5%;">
-        <button type="roll" name="roll_constitution" value="@{constitution}" class="overlay-button" style="top: 35%; left: 12%;">🎲</button>
+        <!-- Skills -->
+        <input type="checkbox" name="attr_acrobatics" class="sheet-skill sheet-acrobatics">
+        <input type="checkbox" name="attr_animal_handling" class="sheet-skill sheet-animal-handling">
+        <input type="checkbox" name="attr_arcana" class="sheet-skill sheet-arcana">
+        <input type="checkbox" name="attr_athletics" class="sheet-skill sheet-athletics">
+        <input type="checkbox" name="attr_deception" class="sheet-skill sheet-deception">
 
-        <!-- Intelligence -->
-        <input type="number" name="attr_intelligence" class="overlay-input" style="top: 40%; left: 5%; width: 5%;">
-        <button type="roll" name="roll_intelligence" value="@{intelligence}" class="overlay-button" style="top: 40%; left: 12%;">🎲</button>
+        <!-- Attack Rolls -->
+        <input type="text" name="attr_attack1" class="sheet-attack sheet-attack-1">
+        <input type="text" name="attr_attack2" class="sheet-attack sheet-attack-2">
+        <input type="text" name="attr_attack3" class="sheet-attack sheet-attack-3">
 
-        <!-- Wisdom -->
-        <input type="number" name="attr_wisdom" class="overlay-input" style="top: 45%; left: 5%; width: 5%;">
-        <button type="roll" name="roll_wisdom" value="@{wisdom}" class="overlay-button" style="top: 45%; left: 12%;">🎲</button>
+        <!-- Wildcard System (Custom Abilities) -->
+        <textarea name="attr_wildcard" class="sheet-wildcard"></textarea>
 
-        <!-- Charisma -->
-        <input type="number" name="attr_charisma" class="overlay-input" style="top: 50%; left: 5%; width: 5%;">
-        <button type="roll" name="roll_charisma" value="@{charisma}" class="overlay-button" style="top: 50%; left: 12%;">🎲</button>
+        <!-- Tabs -->
+        <button class="sheet-tab sheet-tab-core" onclick="switchTab('core')">Core</button>
+        <button class="sheet-tab sheet-tab-bio" onclick="switchTab('bio')">Bio</button>
+        <button class="sheet-tab sheet-tab-spells" onclick="switchTab('spells')">Spells</button>
 
-    </div>
-
-    <!-- Bio Page -->
-    <div id="bio" class="tab-content" style="display: none;">
-        <img src="https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/images/bio.png" alt="Bio Sheet">
-    </div>
-
-    <!-- Spells Page -->
-    <div id="spells" class="tab-content" style="display: none;">
-        <img src="https://raw.githubusercontent.com/CromLordOfTheMountain/DBZ-5e-Character-Sheet/main/images/spells.png" alt="Spells Sheet">
+        <!-- Tab Content -->
+        <div id="core" class="sheet-tab-content sheet-tab-core-content">
+            <img src="images/core.png">
+        </div>
+        <div id="bio" class="sheet-tab-content">
+            <img src="images/bio.png">
+        </div>
+        <div id="spells" class="sheet-tab-content">
+            <img src="images/spells.png">
+        </div>
     </div>
 
     <script>
         function switchTab(tabName) {
-            document.getElementById("core").style.display = "none";
-            document.getElementById("bio").style.display = "none";
-            document.getElementById("spells").style.display = "none";
-
+            document.querySelectorAll(".sheet-tab-content").forEach(tab => {
+                tab.style.display = "none";
+            });
             document.getElementById(tabName).style.display = "block";
         }
     </script>
