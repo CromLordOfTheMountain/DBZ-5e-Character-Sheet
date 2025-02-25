@@ -91,9 +91,16 @@
     {
       "attribute": "wildcard_system",
       "displayname": "Wildcard System (Unique Abilities)",
-      "type": "text",
-      "default": "",
-      "description": "Used for special Ki abilities, transformations, or unique skills beyond standard techniques."
+      "type": "checkbox",
+      "value": "1",
+      "description": "Adds a special feature slot for unique DBZ abilities."
+    },
+    {
+      "attribute": "fusion",
+      "displayname": "Fusion Mechanic",
+      "type": "checkbox",
+      "value": "1",
+      "description": "Enables Fusion between two characters to temporarily merge stats."
     },
     {
       "attribute": "tab",
