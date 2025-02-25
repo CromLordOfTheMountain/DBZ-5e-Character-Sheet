@@ -1,70 +1,110 @@
-/* Background and General Layout */
-body {
-    background-color: #f4a900;
-    text-align: center;
-    font-family: Arial, sans-serif;
+/* Background Styling */
+.sheet-container {
+    position: relative;
+    width: 1000px;
+    height: 1400px;
+    background-color: #fa900;
+    margin: auto;
 }
 
-/* Tabs */
-.tabs {
-    margin: 10px;
-}
-
-.tab-button {
-    padding: 8px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    margin: 5px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-}
-
-.tab-button:hover {
-    background-color: #444;
-}
-
-/* Character Sheet Styling */
-.tab-content img {
+.sheet-background {
+    position: absolute;
     width: 100%;
-    max-width: 900px;
-    border: 3px solid black;
-    border-radius: 10px;
+    height: 100%;
+    z-index: -1;
 }
 
-/* Overlay Inputs */
-.overlay-input {
+/* Character Info */
+.char-info {
     position: absolute;
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid black;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: bold;
+    top: 50px;
+    left: 100px;
+    width: 800px;
 }
 
-/* Dice Roll Buttons */
-.overlay-button {
-    position: absolute;
-    background: #ffcc00;
-    border: 2px solid black;
-    border-radius: 50%;
-    width: 25px;
-    height: 25px;
+.char-info label, .char-info input {
+    display: block;
     font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
 }
 
-.overlay-button:hover {
-    background: #ff9900;
+.char-info input {
+    width: 300px;
 }
 
-/* Exhaustion Dropdown */
-.overlay-input select {
+/* Core Stats */
+.stats {
+    position: absolute;
+    top: 250px;
+    left: 60px;
+    width: 200px;
+}
+
+.stats label {
     font-size: 14px;
-    padding: 5px;
-    border-radius: 5px;
+}
+
+.stats input {
+    width: 50px;
+}
+
+/* Rolls */
+.rolls {
+    position: absolute;
+    top: 600px;
+    left: 60px;
+}
+
+.rolls button {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Skills */
+.skills {
+    position: absolute;
+    top: 800px;
+    left: 60px;
+}
+
+.skills label, .skills input {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/* Ki Abilities */
+.ki-abilities {
+    position: absolute;
+    top: 1000px;
+    left: 60px;
+    width: 400px;
+}
+
+.ki-abilities input, .ki-abilities textarea {
+    display: block;
+    width: 90%;
+}
+
+/* Attacks & Spells */
+.attacks {
+    position: absolute;
+    top: 1200px;
+    left: 60px;
+    width: 400px;
+}
+
+.attacks input {
+    width: 200px;
+}
+
+/* Features & Traits */
+.traits {
+    position: absolute;
+    top: 1300px;
+    left: 60px;
+    width: 400px;
+}
+
+.traits textarea {
+    width: 100%;
+    height: 80px;
 }
